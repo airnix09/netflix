@@ -1,24 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Section from "./Section";
+import logo from "./assets/logo-netflix.png";
+import data from "./assets/data.json";
+import "./App.css";
+
+const sections = data.map((key) => {
+  return <Section category={key.category} images={key.images}></Section>;
+});
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <img src={logo} alt="logo Netflix"></img>
+      {sections}
     </div>
   );
 }

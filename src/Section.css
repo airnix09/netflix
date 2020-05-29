@@ -1,0 +1,21 @@
+.section p {
+  color: white;
+  font-size: 20px;
+  margin: 20px 0;
+}
+
+.list-movies {
+  display: flex;
+  margin-bottom: 50px;
+  overflow: hidden;
+  overflow-x: scroll;
+}
+
+.list-movies::-webkit-scrollbar {
+  display: none;
+}
+
+.list-movies img {
+  width: 220px;
+  object-fit: cover;
+}
